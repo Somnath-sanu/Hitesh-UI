@@ -2,7 +2,14 @@
 
 import Image from "next/image"
 import { BackgroundGradient } from "./ui/background-gradient"
-export function Card({image , language , paragraph}) {
+
+interface CardProps {
+  image : string;
+  language : string;
+  paragraph : string;
+}
+
+export function Card({image , language , paragraph} : CardProps) {
   return (
     <div className="relative flex justify-center items-center">
       <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
